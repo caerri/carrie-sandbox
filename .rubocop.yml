@@ -6,3 +6,37 @@ inherit_gem: { rubocop-rails-omakase: rubocop.yml }
 # # Use `[a, [b, c]]` not `[ a, [ b, c ] ]`
 # Layout/SpaceInsideArrayLiteralBrackets:
 #   Enabled: false
+AllCops:
+  TargetRubyVersion: 3.3
+  NewCops: enable
+
+# 4-space indentation
+Layout/IndentationWidth:
+  Width: 4
+
+Layout/CaseIndentation:
+  IndentOneStep: true
+
+Layout/FirstArgumentIndentation:
+  IndentationWidth: 4
+
+Layout/FirstArrayElementIndentation:
+  IndentationWidth: 4
+
+Layout/FirstHashElementIndentation:
+  IndentationWidth: 4
+
+Layout/FirstParameterIndentation:
+  IndentationWidth: 4
+
+# Line length - Rails default is 120
+Layout/LineLength:
+  Max: 120
+
+# Method length - be reasonable
+Metrics/MethodLength:
+  Max: 15
+
+# Class length
+Metrics/ClassLength:
+  Max: 100

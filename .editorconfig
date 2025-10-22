@@ -1,0 +1,33 @@
+root = true
+
+# Default settings for all files
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Ruby files - 4 space indentation
+[*.rb]
+indent_style = space
+indent_size = 4
+
+# ERB templates
+[*.erb]
+indent_style = space
+indent_size = 4
+
+# JavaScript/JSON - 4 spaces to match
+[*.{js,json}]
+indent_style = space
+indent_size = 4
+
+# YAML files (like config files) - 2 spaces is standard
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+
+# Gemfile and Rakefile
+[{Gemfile,Rakefile}]
+indent_style = space
+indent_size = 4
