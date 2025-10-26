@@ -147,6 +147,49 @@ print " will do prints later. "
 # irb(main):031> "Ruby on Rails".split("")
 # => ["R", "u", "b", "y", " ", "o", "n", " ", "R", "a", "i", "l", "s"]
 
+# --- not enough context on this piece but is scan using regex?
+# irb(main):045> arr
+# => "Ruby on Rails"
+# irb(main):046> arr.scan(/\w/)
+# => ["R", "u", "b", "y", "o", "n", "R", "a", "i", "l", "s"]
+
+# array concatenation. would be responsible for assigning the concatdnd array to variableirb(main):047> arr = [1, 2, 3, 4, 5]
+# => [1, 2, 3, 4, 5]
+# irb(main):048> arr1 = [25, 10, 3, 2, 10, 100, 100]
+# => [25, 10, 3, 2, 10, 100, 100]
+# irb(main):049> arr + arr1
+# => [1, 2, 3, 4, 5, 25, 10, 3, 2, 10, 100, 100]
+# irb(main):050> arr
+# => [1, 2, 3, 4, 5]
+# irb(main):051> arr1
+# => [25, 10, 3, 2, 10, 100, 100]
+# so .....
+# irb(main):052> arr2 = arr + arr1
+# => [1, 2, 3, 4, 5, 25, 10, 3, 2, 10, 100, 100]
+# irb(main):053> arr2
+# => [1, 2, 3, 4, 5, 25, 10, 3, 2, 10, 100, 100]
+
+# other methods within the array class
+# irb(main):076> arr2
+# => [1, 2, 3, 4, 5, 25, 10, 3, 2, 10, 100, 100]
+# irb(main):077> arr2.first
+# => 1
+# irb(main):078> arr2.last
+# => 100
+# irb(main):079> arr2.first(3)
+# => [1, 2, 3]
+# irb(main):081> arr2.last(3)
+# => [10, 100, 100]
+# irb(main):082> arr.reverse
+# => [5, 4, 3, 2, 1]
+# irb(main):083> arr2.reverse
+# => [100, 100, 10, 2, 3, 10, 25, 5, 4, 3, 2, 1]
+# irb(main):084> arr2
+# => [1, 2, 3, 4, 5, 25, 10, 3, 2, 10, 100, 100]
+# irb(main):085> arr2.reverse.first(3)
+# => [100, 100, 10]
+# irb(main):090> arr2.reverse.last(3)
+# => [3, 2, 1]
 print "--------------------- enumerating --------------------- \n"
 print "#{arr=[]
 3.times {|i| arr.push i}
@@ -160,3 +203,197 @@ print "\n----------------------- strings! ----------------------\n"
 # => ["R", "u", "b", "y", " ", "o", "n", " ", "R", "a", "i", "l", "s"]
 # irb(main):034> arr.size
 # => 13
+# ---- fun:
+# irb(main):035> "Ruby on Rails".split.join
+# => "RubyonRails"
+# irb(main):036> "Ruby on Rails".split.join.split("")
+# => ["R", "u", "b", "y", "o", "n", "R", "a", "i", "l", "s"]
+# irb(main):037> arr
+# => ["R", "u", "b", "y", " ", "o", "n", " ", "R", "a", "i", "l", "s"]
+# irb(main):038> arr.join("")
+# => "Ruby on Rails"
+
+print "\n\n ---------- HASHES ---------- \n\n"
+# syntax: irb(main):092> credentials = {}
+# => {}
+# irb(main):093> credentials = { public_key: "asdf1234", secret_key: "4321fdsa" }
+# => {:public_key=>"asdf1234", :secret_key=>"4321fdsa"}
+
+# where are the keys?
+# irb(main):094> credentials
+# => {:public_key=>"asdf1234", :secret_key=>"4321fdsa"}
+# irb(main):095> credentials[:public_key]
+# => "asdf1234"
+# irb(main):096> credentials[:secret_key]
+# => "4321fdsa"
+
+# updating keys
+# irb(main):097> credentials[:public_key] = "asdfasdfasdf"
+# => "asdfasdfasdf"
+# irb(main):098> credentials[:public_key]
+# => "asdfasdfasdf"
+# irb(main):099> credentials
+# => {:public_key=>"asdfasdfasdf", :secret_key=>"4321fdsa"}
+
+# adding new key: value pairs
+# irb(main):100> credentials[:region] = "aws-east2"
+# => "aws-east2"
+# irb(main):101> credentials
+# => {:public_key=>"asdfasdfasdf", :secret_key=>"4321fdsa", :region=>"aws-east2"}
+
+# check! credentials size:
+# irb(main):101> credentials
+# => {:public_key=>"asdfasdfasdf", :secret_key=>"4321fdsa", :region=>"aws-east2"}
+# irb(main):102> credentials.size
+# => 3
+
+# check! see keys, see values:
+# irb(main):103> credentials.keys
+# => [:public_key, :secret_key, :region]
+# irb(main):104> credentials.values
+# => ["asdfasdfasdf", "4321fdsa", "aws-east2"]
+
+# deleting in hash
+# irb(main):106> credentials.delete:region
+# => "aws-east2"
+# irb(main):107> credentials
+# => {:public_key=>"asdfasdfasdf", :secret_key=>"4321fdsa"}
+
+# creating this array and doing some stuff to it
+# me = {name: "Carrie", age: 31, hobbies: ["long walks on the beach", "programming", "horror films"]}
+# =>
+# {:name=>"Carrie",
+# ...
+# irb(main):115> me[:hobbies]
+# => ["long walks on the beach", "programming", "horror films"]
+# irb(main):116> me[:hobbies].join(", ")
+# => "long walks on the beach, programming, horror films"
+# irb(main):117> me[:hobbies]
+# => ["long walks on the beach", "programming", "horror films"]
+# irb(main):118> me[:hobbies].size
+# => 3
+
+# nested hashes
+
+# :boy_dog    # This is a symbol
+# "boy_dog"   # This is a string - DIFFERENT
+
+# why it matters?
+# Symbols are immutable and memory-efficient for hash keys.
+# Key-value syntax
+# { boy_dog: "Fido" }     # ✅ Modern shorthand - colon AFTER key name
+# { :boy_dog => "Fido" }  # ✅ Old syntax - colon BEFORE key name as symbol
+# Both mean the same thing
+
+# irb(main):123> pets = {boy_dog: {name: "Boy"}, girl_dog: {name: "Little One"}}
+# => {:boy_dog=>{:name=>"Boy"}, :girl_dog=>{:name=>"Little One"}}
+# irb(main):124> pets[:boy_dog]
+# => {:name=>"Boy"}
+# irb(main):125> pets[:girl_dog]
+# => {:name=>"Little One"}
+# irb(main):126> pets.dig(:boy_dog, :name)
+# => "Boy"
+
+# using ruby Blocks
+# irb(main):127* me[:hobbies].each do |hobby|
+# irb(main):128*   puts hobby.capitalize
+# irb(main):129> end
+# Long walks on the beach
+# Programming
+# Horror films
+# => ["long walks on the beach", "programming", "horror films"]
+# NOTE: |hobby| (2nd line) can be anything |x| |i| |foo| |bar| |baz|
+
+# example2:
+# irb(main):133* me[:hobbies].each do |hobby|
+# irb(main):134*   puts hobby.capitalize.swapcase!
+# irb(main):135> end
+# lONG WALKS ON THE BEACH
+# pROGRAMMING
+# hORROR FILMS
+# => ["long walks on the beach", "programming", "horror films"]
+
+# example of alternative ?
+# => {:name=>"Carrie", :age=>31, :hobbies=>["long walks on the beach", "programming", "horror films"]}
+# irb(main):140* me.each do |details|
+# irb(main):141*   p details
+# irb(main):142> end
+# [:name, "Carrie"]
+# [:age, 31]
+# [:hobbies, ["long walks on the beach", "programming", "horror films"]]
+# => {:name=>"Carrie", :age=>31, :hobbies=>["long walks on the beach", "programming", "horror films"]}
+# irb(main):143* me.each do |asdfwefiw|
+# irb(main):144*   p asdfwefiw
+# irb(main):145> end
+# [:name, "Carrie"]
+# [:age, 31]
+# [:hobbies, ["long walks on the beach", "programming", "horror films"]]
+# => {:name=>"Carrie", :age=>31, :hobbies=>["long walks on the beach", "programming", "horror films"]}
+# irb(main):146>
+
+# the above is different with puts than p
+# irb(main):149* me.each do |details|
+# irb(main):150*   puts details
+# irb(main):151> end
+# name
+# Carrie
+# age
+# 31
+# hobbies
+# long walks on the beach
+# programming
+# horror films
+# => {:name=>"Carrie", :age=>31, :hobbies=>["long walks on the beach", "programming", "horror films"]}
+# irb(main):152>
+
+# the above is also different with print
+# irb(main):152* me.each do |details|
+# irb(main):153*   print details
+# irb(main):154> end
+# [:name, "Carrie"][:age, 31][:hobbies, ["long walks on the beach", "programming", "horror films"]]=> {:name=>"Carrie", :age=>31, :hobbies=>["long walks on the beach", "programming", "horror films"]}
+
+# the following will assign key to key variable val to the val variable
+# irb(main):155* me.each do |key, val|
+# irb(main):156*   puts "#{key} => #{val}"
+# irb(main):157> end
+# name => Carrie
+# age => 31
+# hobbies => ["long walks on the beach", "programming", "horror films"]
+# => {:name=>"Carrie", :age=>31, :hobbies=>["long walks on the beach", "programming", "horror films"]}
+
+# another way to make key-value pairs is with"hash rocket" (older style) but :symbol more modern
+# irb(main):158> {"foo" => "bar"}
+# => {"foo"=>"bar"}
+
+# what happens when a key doesn't exist?
+# irb(main):159> me[:location]
+# => nil
+
+# now learning merge... where (lost train of thought)
+# irb(main):160> new_age = {age: 39}
+# => {:age=>39}
+# irb(main):161> me
+# => {:name=>"Carrie", :age=>31, :hobbies=>["long walks on the beach", "programming", "horror films"]}
+# irb(main):162> new_age = {age: 39}
+# => {:age=>39}
+# irb(main):163> me.merge(new_age)
+# => {:name=>"Carrie", :age=>39, :hobbies=>["long walks on the beach", "programming", "horror films"]}
+
+# other thing on a new thing
+# irb(main):165> h = {["foo", "bar"] => "baz"}
+# => {["foo", "bar"]=>"baz"}
+# irb(main):168> h[["foo", "bar"]]
+# => "baz"
+
+# alternatives for stuff #TODO: Revisit when something practical arises in hashes
+# See that when evaluating b[:name] is nil ?
+# irb(main):174> a = {name: "Carrie"}
+# => {:name=>"Carrie"}
+# irb(main):175> b = {"name" => "George"}
+# => {"name"=>"George"}
+# irb(main):176> a[:name]
+# => "Carrie"
+# irb(main):177> b[:name]
+# => nil
+# irb(main):178> b["name"]
+# => "George"
