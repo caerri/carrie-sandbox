@@ -34,6 +34,9 @@ print "#{2.even?} <-- 2.even?\n"
 print "#{4.odd?} <-- 4.odd?\n"
 print "#{3.even?} <-- 3.even?\n"
 print "#{3.odd?} <-- 3.odd?\n"
+print "--------------------- array stuff ---------------------\n"
+
+print "--------------------- enumerating ---------------------\n"
 print "#{arr=[]
 3.times {|i| arr.push i}
 arr} <--   arr=[]                   # to open an empty array
