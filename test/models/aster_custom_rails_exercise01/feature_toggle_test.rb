@@ -1,7 +1,11 @@
-require "test_helper"
+# frozen_string_literal: true
 
-class AsterCustomRailsExercise01::FeatureToggleTest < ActiveSupport::TestCase
-    # test "the truth" do
-    #   assert true
-    # end
+require 'test_helper'
+
+module AsterCustomRailsExercise01
+    class FeatureToggleTest < ActiveSupport::TestCase
+        # test "the truth" do
+        #   assert true
+        # end
+    end
 end

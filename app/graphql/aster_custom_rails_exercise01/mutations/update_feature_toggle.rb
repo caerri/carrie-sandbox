@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module AsterCustomRailsExercise01
     module Mutations
         class UpdateFeatureToggle < ::Mutations::BaseMutation
@@ -8,7 +10,7 @@ module AsterCustomRailsExercise01
 
             # Define what this mutation returns to GraphQL clients
             field :feature_toggle, AsterCustomRailsExercise01::Types::FeatureToggleType, null: true
-            field :errors, [ String ], null: false
+            field :errors, [String], null: false
 
             # This method runs when the mutation is called
             def resolve(id:, enabled: nil, data: nil)
@@ -20,15 +22,15 @@ module AsterCustomRailsExercise01
 
                 # If JSON data provided, store it and compute new composite boolean
                 if data
-                    ft.data = data                                  # Store raw JSON
-                    ft.effective_enabled = ft.effective_enabled_from_data?  # Compute composite
+                    ft.data = data # Store raw JSON
+                    ft.effective_enabled = ft.effective_enabled_from_data? # Compute composite
                 end
 
                 # Try to save - return success or error response
                 if ft.save
-                    { feature_toggle: ft, errors: [] }             # Success: return record
+                    { feature_toggle: ft, errors: [] } # Success: return record
                 else
-                    { feature_toggle: nil, errors: ft.errors.full_messages }  # Failure: return errors
+                    { feature_toggle: nil, errors: ft.errors.full_messages } # Failure: return errors
                 end
             end
         end

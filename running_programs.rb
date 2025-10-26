@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 # this exists due to my lack of current note structure.
 # currently @: https://gorails.com/episodes/integers-and-floats-in-ruby
 
 print "\n--------------------- ints ---------------------\n"
 puts "#{2 + 2} <- this is: puts 2 + 2\n"
 p "#{2 + 2} <-- this is: p 2 + 2\n"
-puts "(notice how there are quotes around the above). why?\n" #TODO: answer question
+puts "(notice how there are quotes around the above). why?\n" # TODO: answer question
 print "#{2 + 2} <-- this is: print 2 + 2\n"
 print "#{2 - 2} <-- this is a print 2 - 2\n"
 print "#{2 / 2} <-- this is a print 2 / 2\n"
@@ -36,7 +38,7 @@ print "#{3.even?} <-- 3.even?\n"
 print "#{3.odd?} <-- 3.odd?\n"
 # other update value types += -= /= *= are similar
 print "--------------------- array stuff ---------------------\n"
-print " will do prints later. "
+print ' will do prints later. '
 # in irb, this is an example for assigning a variable
 # to the previous array entered in irb:
 # irb(main):005> ["this", "is", "an", "array"]
@@ -81,7 +83,6 @@ print " will do prints later. "
 # irb(main):011> arr
 # => [25, 8, 3, 4, 50]
 # irb(main):012>
-
 
 # --- shovel operator << is like a push to end of array
 # irb(main):011> arr
@@ -191,12 +192,12 @@ print " will do prints later. "
 # irb(main):090> arr2.reverse.last(3)
 # => [3, 2, 1]
 print "--------------------- enumerating --------------------- \n"
-print "#{arr=[]
-3.times {|i| arr.push i}
-arr} <--   arr=[]                   # to open an empty array
+print "#{arr = []
+         3.times { |i| arr.push i }
+         arr} <--   arr=[]                   # to open an empty array
                 3.times {|i| arr.push i} # enumerates 3 times, pushing index i to array
                 arr                      # then prints the new array
-                                         # note to self: is |i| indicating .abs?" #TODO: answer question
+                                         # note to self: is |i| indicating .abs?" # TODO: answer question
 print "\n----------------------- strings! ----------------------\n"
 # ----- Strings and array stuff -----
 # irb(main):033> arr
