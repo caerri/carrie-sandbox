@@ -4,7 +4,7 @@
 print "\n--------------------- ints ---------------------\n"
 puts "#{2 + 2} <- this is: puts 2 + 2\n"
 p "#{2 + 2} <-- this is: p 2 + 2\n"
-puts "(notice how there are quotes around the above). why?\n"
+puts "(notice how there are quotes around the above). why?\n" #TODO: answer question
 print "#{2 + 2} <-- this is: print 2 + 2\n"
 print "#{2 - 2} <-- this is a print 2 - 2\n"
 print "#{2 / 2} <-- this is a print 2 / 2\n"
@@ -28,7 +28,7 @@ where #4 <=> 7 and 4 is on the lower end\n"
 print "#{7 <=> 4} <-- 7 <=> 4\n"
 print "#{4 <=> 4} <-- 4 <=> 4\n"
 print "--------------------- int methods ---------------------\n"
-print "-------https://ruby-doc.org/3.4.1/Integer.html---------\n"
+print "------ https://ruby-doc.org/3.4.1/Integer.html --------\n"
 print "#{-1.abs} <-- -1.abs\n"
 print "#{2.even?} <-- 2.even?\n"
 print "#{4.odd?} <-- 4.odd?\n"
@@ -38,6 +38,7 @@ print "#{arr=[]
 3.times {|i| arr.push i}
 arr} <--   arr=[]                   # to open an empty array
                 3.times {|i| arr.push i} # enumerates 3 times, pushing index i to array
-                arr                      # then prints the new array"
+                arr                      # then prints the new array
+                                         # note to self: is |i| indicating .abs?" #TODO: answer question
 print "\n----------------------- strings! ----------------------\n"
 
