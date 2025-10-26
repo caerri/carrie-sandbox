@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_10_22_042515) do
+ActiveRecord::Schema[8.0].define(version: 2025_10_22_060608) do
   create_table "aster_custom_rails_exercise01_feature_toggles", force: :cascade do |t|
     t.boolean "enabled", default: false, null: false
     t.boolean "effective_enabled", default: false, null: false
@@ -18,5 +18,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_22_042515) do
     t.string "data_quality", default: "unknown", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "account_verified"
   end
 end
