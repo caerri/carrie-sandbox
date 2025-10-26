@@ -35,7 +35,22 @@ print "#{4.odd?} <-- 4.odd?\n"
 print "#{3.even?} <-- 3.even?\n"
 print "#{3.odd?} <-- 3.odd?\n"
 print "--------------------- array stuff ---------------------\n"
+print " will do prints later. "
+    # in irb, this is an example for assigning a variable
+    # to the previous array entered in irb:
+    # irb(main):005> ["this", "is", "an", "array"]
+    # => ["this", "is", "an", "array"]
+    # irb(main):006> arr1 = _
+    # => ["this", "is", "an", "array"]
+    # irb(main):007> arr1
+    # => ["this", "is", "an", "array"]
+    # irb(main):008>
 
+    # ------ you can find the index in reverse by doing ... -----
+    # irb(main):011> arr1[0]
+    # => "this"
+    # irb(main):012> arr1[-1]
+    # => "array"
 print "--------------------- enumerating ---------------------\n"
 print "#{arr=[]
 3.times {|i| arr.push i}
