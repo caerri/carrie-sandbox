@@ -51,7 +51,7 @@ print " will do prints later. "
     # => "this"
     # irb(main):012> arr1[-1]
     # => "array"
-print "--------------------- enumerating ---------------------\n"
+print "--------------------- enumerating --------------------- \n"
 print "#{arr=[]
 3.times {|i| arr.push i}
 arr} <--   arr=[]                   # to open an empty array
