@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This project will be a password manager as part of the
-# Conditionals in Ruby of GO RAILS.
+# Conditionals and control flow in Ruby of GO RAILS.
 
 # ALL CAPS indicates it's like a constant. Ruby will warn
 # when trying to change it but it can be changed unless "FROZEN".
@@ -84,3 +84,11 @@ else
     puts "Exiting program."
     exit
 end
+
+# Notes from end of video: Ternary operator
+# irb(main):047> number.odd? ? "odd" : "even"
+# => "odd"
+# irb(main):048> number = 2
+# => 2
+# irb(main):049> number.odd? ? "odd" : "even"
+# => "even"
