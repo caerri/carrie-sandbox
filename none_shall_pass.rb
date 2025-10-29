@@ -51,7 +51,7 @@ unless user_password != PASSWORD
     print "Please type a selection: "
     user_selection = gets.chomp
 else
-    puts "Invalid Password."zq
+    puts "Invalid Password."
     exit
 end
 

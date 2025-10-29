@@ -398,3 +398,63 @@ print "\n\n ---------- HASHES ---------- \n\n"
 # => nil
 # irb(main):178> b["name"]
 # => "George"
+
+# ------------ defining methods --------------- #
+
+# irb(main):030* def simple
+# irb(main):031*   puts "Hello world"
+# irb(main):032> end
+# => :simple
+# irb(main):033> simple
+# Hello world
+# => nil
+
+# passing to method
+# irb(main):036*   puts "hello, #{name}"
+# irb(main):037> end
+# => :say_hello
+# irb(main):039> say_hello("Carrie")
+# hello, Carrie
+# => nil
+
+# irb(main):044* def say(greeting, name)
+# irb(main):045*   puts("#{greeting}, #{name}")
+# irb(main):046> end
+# irb(main):047> say("hi", "you")
+# hi, you
+
+#irb(main):048* def say(greeting = "hello", name = "user")
+# irb(main):049*   puts "#{greeting}, #{name}"
+# irb(main):050> end
+# => :say
+# irb(main):051> say()
+# hello, user
+# => nil
+# irb(main):052> say("hi")
+# hi, user
+# => nil
+# irb(main):053> say("","")
+# ,
+# => nil
+# irb(main):054> say(,"")
+# <internal:kernel>:187:in `loop': .........
+
+# assigning inputs for return values out of order
+#irb(main):061* def say(greeting:, name:)
+# irb(main):062*   puts "#{greeting}, #{name}"
+# irb(main):063> end
+# => :say
+# irb(main):064> say(greeting: "Hi", name:"Nosforatu")
+# Hi, Nosforatu
+# => nil
+# irb(main):065> say(name: "1st", greeting: "second")
+# second, 1st
+# => nil
+
+# assigning inputs for return value and dealing defaults
+# irb(main):067* def say(greeting: "hey", name:)
+# irb(main):068*   puts "#{greeting}, #{name}"
+# irb(main):069> end
+# => :say
+# irb(main):070> say(name:"myname")
+# hey, myname
